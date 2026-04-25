@@ -1,5 +1,4 @@
-# crossplatform2026project
+# Crossplatform 2026 Flutter app
 
-Flutter project that is in progress
 
 
