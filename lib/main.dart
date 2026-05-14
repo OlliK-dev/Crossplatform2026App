@@ -1,4 +1,6 @@
-import 'package:crossplatform2026project/app_state.dart';
+import 'package:crossplatform2026project/repositories/favorites_repository.dart';
+import 'package:crossplatform2026project/services/favorites_service.dart';
+import 'package:crossplatform2026project/viewmodels/app_state.dart';
 import 'package:crossplatform2026project/pages/favorites_page.dart';
 import 'package:crossplatform2026project/pages/generator_page.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
+      create: (context) => MyAppState(
+        FavoritesRepository(
+          FavoritesService(),
+        ),
+      ),
       child: MaterialApp(
         title: 'Flutter Application',
         theme: ThemeData(
